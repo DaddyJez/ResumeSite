@@ -248,7 +248,6 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Скрываем солнце по умолчанию */
 .sun {
     display: none;
 }
@@ -261,7 +260,6 @@ footer {
     display: block;
 }
 
-/* Анимация при переключении */
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -272,5 +270,5 @@ footer {
 }
 
 [data-theme="dark"] .theme-btn {
-    background: #64ffda;
+    background: #F8F9F9;
 }
