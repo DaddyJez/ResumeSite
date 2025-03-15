@@ -92,7 +92,7 @@ h2 { font-size: 1.8rem; }
 
 .dark-theme {
     --primary-color: #D48958;
-    --secondary-color: #B87C5D;
+    --secondary-color: #2D211B;
     --background: #2D211B;
     color: #F0DED6;
     --footer-bg: rgba(45, 33, 27, 0.95);
@@ -215,4 +215,62 @@ footer {
     color: var(--primary-color);
     margin-bottom: 15px;
     font-weight: 500;
+}
+
+.theme-btn {
+    --size: 40px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.theme-icon svg {
+    width: 60%;
+    height: 60%;
+    fill: white;
+    transition: all 0.3s ease;
+}
+
+/* Скрываем солнце по умолчанию */
+.sun {
+    display: none;
+}
+
+[data-theme="dark"] .moon {
+    display: none;
+}
+
+[data-theme="dark"] .sun {
+    display: block;
+}
+
+/* Анимация при переключении */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.theme-btn:hover .moon {
+    animation: rotate 5s linear infinite;
+}
+
+[data-theme="dark"] .theme-btn {
+    background: #64ffda;
 }
