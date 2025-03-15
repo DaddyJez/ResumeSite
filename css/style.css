@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #2E86C1;
-    --secondary-color: #5D6D7E;
+    --primary-color: #D48958;
+    --secondary-color: #2D211B;
     --background: #F8F9F9;
     --footer-bg: rgba(255, 255, 255, 0.95);
     --footer-text: #333;
@@ -91,20 +91,21 @@ h2 { font-size: 1.8rem; }
 }
 
 .dark-theme {
-    --primary-color: #2E86C1;
-    --secondary-color: #8892B0;
-    --background: #0A192F;
-    color: #CCD6F6;
-    --footer-bg: rgba(16, 25, 47, 0.95);
-    --footer-text: #ccd6f6;
-    --footer-border: rgba(255, 255, 255, 0.1);
+    --primary-color: #D48958;
+    --secondary-color: #B87C5D;
+    --background: #2D211B;
+    color: #F0DED6;
+    --footer-bg: rgba(45, 33, 27, 0.95);
+    --footer-text: #E6D5CD;
+    --footer-border: rgba(240, 222, 214, 0.1);
 }
 
 .dark-theme .skill-card,
 .dark-theme .project-card {
-    background: #112240;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background: #3A2A24;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
+
 
 .filter-buttons {
     margin: 20px 0;
@@ -113,6 +114,7 @@ h2 { font-size: 1.8rem; }
 
 .filter-btn {
     background: var(--primary-color);
+    color: #ffffff;
     border: none;
     padding: 8px 15px;
     margin: 5px;
@@ -155,7 +157,7 @@ h2 { font-size: 1.8rem; }
 }
 
 .dark-theme .modal-content {
-    background: #112240;
+    background: #2D211B;
 }
 
 .strengths-list {
