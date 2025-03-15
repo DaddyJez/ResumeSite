@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vladislav Karagodin - Software Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <button id="theme-toggle">🌙</button>
+
+        <h1>Vladislav Karagodin</h1>
+        <h2>Software Developer (Swift & C#)</h2>
+        <div class="contacts">
+            <p><i class="fas fa-map-marker-alt"></i> Moscow, Russia</p>
+            <p><i class="fas fa-envelope"></i> vladkaragodin302@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +7 (900) 228-17-11</p>
+            <p>
+                <a href="https://github.com/DaddyJez" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <!-- | <a href="[YOUR_LINKEDIN]" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> -->
+            </p>
+        </div>
+    </div>
+</header>
+
+<section class="summary">
+    <div class="container">
+        <h3><i class="fas fa-user"></i> About Me</h3>
+        <p>Versatile developer with 6+ months of hands-on experience in <strong>game development</strong> (Unity/C#) and <strong>process automation</strong> (Python). Proficient in Swift, SQL, and UI/UX principles, with a knack for transforming complex ideas into efficient code.</p>
+
+        <p>Key strengths that fuel my work:
+        <ul class="strengths-list">
+            <li><i class="fas fa-bolt"></i> Rapid skill acquisition</li>
+            <li><i class="fas fa-users"></i> Collaborative leadership</li>
+            <li><i class="fas fa-search"></i> Detail-oriented optimization</li>
+        </ul>
+        </p>
+
+        <p>When not coding, leverage Photoshop expertise to create visual assets for projects, blending technical development with artistic design.</p>
+    </div>
+</section>
+
+<section class="skills">
+    <div class="container">
+        <h3><i class="fas fa-code"></i> Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-card animate-on-scroll">
+                <h4><i class="fab fa-swift"></i> Swift</h4>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+                <ul>
+                    <li>SwiftUI</li>
+                    <li>Database integrations</li>
+                    <li>VIPER/MVVM structures</li>
+                </ul>
+            </div>
+            <div class="skill-card animate-on-scroll">
+                <h4><i class="fab fa-unity"></i> Unity/C#</h4>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+                <ul>
+                    <li>3D/2D Physics</li>
+                    <li>Behavior scripts</li>
+                    <li>SOLID stricture</li>
+                </ul>
+            </div>
+            <div class="skill-card animate-on-scroll">
+                <h4><i class="fab fa-python"></i> Python</h4>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+                <ul>
+                    <li>Pandas</li>
+                    <li>Automation</li>
+                    <li>PyGame</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects">
+    <div class="container">
+        <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+
+        <div class="filter-buttons animate-on-scroll">
+            <button class="filter-btn" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('swift')">Swift</button>
+            <button class="filter-btn" onclick="filterProjects('csharp')">C#</button>
+            <button class="filter-btn" onclick="filterProjects('python')">Python</button>
+            <button class="filter-btn" onclick="filterProjects('game')">Games</button>
+        </div>
+
+        <!-- Excel Price Normalizer -->
+        <div class="project-card animate-on-scroll"
+             data-tags="python automation all"
+             onclick="openModal({
+                 title: 'Excel Automation',
+                 content: 'Automated price processing system with email integration.',
+                 tags: 'python,pandas,automation',
+                 image: 'images/Normalizer.png'
+             })">
+            <div class="project-header">
+                <h4>Excel Price Normalizer (Python)</h4>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+            <ul>
+                <li>Fixed critical database synchronization bugs, improving data accuracy by 40%.</li>
+                <li>Merged two standalone tools (price normalization and forwarding) into a unified system.</li>
+                <li>Integrated email parsing (IMAP) for automated price list retrieval and cloud uploads.</li>
+            </ul>
+        </div>
+
+        <!-- PacMan 3D -->
+        <div class="project-card animate-on-scroll"
+             data-tags="csharp game all"
+             onclick="openModal({
+                 title: 'PacMan 3D',
+                 content: 'Developed 3D version of classic arcade game.',
+                 tags: 'unity,csharp,3d',
+                 image: 'images/PacMan3D.png'
+             })">
+            <div class="project-header">
+                <h4>PacMan 3D (Unity/C#)</h4>
+                <div class="tech-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity</span>
+                    <span class="tag">3D</span>
+                </div>
+            </div>
+            <ul>
+                <li>Built core gameplay mechanics: ghost AI, point collection system, and portal-based level completion.</li>
+                <li>Designed 3 worlds with increasing difficulty.</li>
+            </ul>
+        </div>
+
+        <!-- Inventory App -->
+        <div class="project-card animate-on-scroll"
+             data-tags="swift all"
+             onclick="openModal({
+                 title: 'Inventory Manager',
+                 content: 'iOS app for equipment tracking.',
+                 tags: 'swift,firebase,ui',
+                 image: 'images/InventORY.png'
+             })">
+            <div class="project-header">
+                <h4>Inventory Management App (Swift)</h4>
+                <div class="tech-tags">
+                    <span class="tag">Swift</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Cloud</span>
+                </div>
+            </div>
+            <ul>
+                <li>Implementing Firebase Cloud Firestore for real-time sync.</li>
+                <li>User auth system with login/password</li>
+                <li>ID generation system with 1.5B+ readable combinations (A-Z, 2-9 chars).</li>
+                <li>Mastered Swift fundamentals in 2 weeks through project-driven learning.</li>
+            </ul>
+        </div>
+
+        <!-- Racing Track 2D -->
+        <div class="project-card animate-on-scroll"
+             data-tags="csharp game all"
+             onclick="openModal({
+                 title: 'Retro Racing',
+                 content: '2D arcade racing game with custom physics.',
+                 tags: 'unity,csharp,2d,physics',
+                 image: 'images/'
+             })">
+            <div class="project-header">
+                <h4>Racing Track 2D (Unity/C#)</h4>
+                <div class="tech-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity</span>
+                    <span class="tag">2D</span>
+                </div>
+            </div>
+            <ul>
+                <li>Created car physics system with speed-dependent handling adjustments.</li>
+                <li>Implemented anti-cheat checkpoints and dual camera modes (static map + player follow).</li>
+                <li>Designed retro-style pixel art assets and time-attack gameplay mechanics.</li>
+                <li>Optimized performance for low-end hardware (60 FPS on integrated GPUs).</li>
+            </ul>
+        </div>
+
+        <!-- Mobile Farm Game -->
+        <div class="project-card animate-on-scroll"
+             data-tags="csharp game all"
+             onclick="openModal({
+                 title: 'Farm Simulator',
+                 content: 'Mobile farming game with crop growth system.',
+                 tags: 'unity,csharp,mobile,2d',
+                 image: 'images/Farm.png'
+             })">
+            <div class="project-header">
+                <h4>Mobile Farm Game (Unity/C#)</h4>
+                <div class="tech-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Mobile</span>
+                    <span class="tag">2D</span>
+                </div>
+            </div>
+            <ul>
+                <li>Built crop growth system with timed harvest mechanics and score tracking.</li>
+                <li>Optimized touch controls and UI for mobile devices.</li>
+                <li>Shared solution with classmates, completing the task 1 week ahead of schedule.</li>
+            </ul>
+        </div>
+
+        <!-- PyGame Runner -->
+        <div class="project-card animate-on-scroll"
+             data-tags="python game all"
+             onclick="openModal({
+                 title: '2D Platformer',
+                 content: 'Side-scrolling runner game developed in Python.',
+                 tags: 'python,pygame,2d',
+                 image: 'images/PyGameBrodilka.png'
+             })">
+            <div class="project-header">
+                <h4>2D Runner (Python/PyGame)</h4>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyGame</span>
+                    <span class="tag">2D</span>
+                </div>
+            </div>
+            <ul>
+                <li>Implemented character animations, enemy behavior, and projectile mechanics.</li>
+                <li>Created a leaderboard system using SQLite for score tracking.</li>
+                <li>Mastered PyGame library fundamentals within 2 weeks of initial learning.</li>
+            </ul>
+        </div>
+
+        <!-- Fighting Game -->
+        <div class="project-card animate-on-scroll"
+             data-tags="csharp game all"
+             onclick="openModal({
+                 title: '2D Fighter',
+                 content: 'Multiplayer fighting game with spell system. Key mechanics:',
+                 tags: 'unity,csharp,2d,multiplayer',
+                 image: 'images/2DFighting.png'
+             })">
+            <div class="project-header">
+                <h4>2D Fighter (Unity/C#)</h4>
+                <div class="tech-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity</span>
+                    <span class="tag">2D</span>
+                </div>
+            </div>
+            <ul>
+                <li>Developed competitive 2D fighting mechanics with knock-off platform mechanics.</li>
+                <li>Implemented spells with combo-chaining system.</li>
+                <li>Balanced character stats for fast-paced matches (avg. 90-second rounds).</li>
+                <li>Created round-based progression system (best of 5 rounds to win).</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="education">
+    <div class="container">
+        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="education-item animate-on-scroll">
+            <h4>Moscow College of Management, Hospitality and IT "Tsaritsyno"</h4>
+            <p>Information Systems & Programming (2023-2026)</p>
+        </div>
+        <div class="education-item animate-on-scroll">
+            <h4>Smolensk Regional Technological Academy</h4>
+            <p>Operator of electronic computers and computing machines (2021)</p>
+        </div>
+        <div class="education-item animate-on-scroll">
+            <h4>Bauman Moscow State Technical University</h4>
+            <p>Python Programming Certificate (2024)</p>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="project-modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-content"></div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Let's Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/DaddyJez" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:vladkaragodin302@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Gmail</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Vladislav Karagodin. All rights reserved</p>
+                <p>With waiting for response</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
